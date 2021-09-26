@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,10 +21,10 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@Component
+@Service
 @RequiredArgsConstructor
 @Slf4j
-public class SwapiClientService {
+public class UploadDataService {
 
     private final AppProperties appProperties;
     private final SwapiClient swapiClient;
@@ -40,12 +40,6 @@ public class SwapiClientService {
         List<Starships.Starship> starships = getStarships();
         uploadStarshipsToDB(starships);
 
-//        Comparator<Starships.Starship> capacityComporator = (s1, s2) -> Long.valueOf(s2.getCargoCapacity()).compareTo(Long.valueOf(s1.getCargoCapacity()));
-//        List<Starships.Starship> topStarships = starships.stream()
-//                .filter(starship -> !"unknown".equals(starship.getCargoCapacity()))
-//                .sorted(capacityComporator)
-//                .limit(10)
-//                .collect(Collectors.toList());
         System.out.printf("stop");
     }
 
@@ -138,6 +132,5 @@ public class SwapiClientService {
                 .collect(Collectors.toSet());
         return charactersEntities;
     }
-
 
 }

@@ -1,6 +1,6 @@
 package cloud.niks.swapiclient;
 
-import cloud.niks.swapiclient.service.SwapiClientService;
+import cloud.niks.swapiclient.service.UploadDataService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @RequiredArgsConstructor
 public class SwapiClientApplication implements CommandLineRunner {
 
-    private final SwapiClientService swapiClientService;
+    private final UploadDataService uploadDataService;
 
     public static void main(String[] args) {
         SpringApplication.run(SwapiClientApplication.class, args);
@@ -18,6 +18,6 @@ public class SwapiClientApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        swapiClientService.run();
+        uploadDataService.run();
     }
 }

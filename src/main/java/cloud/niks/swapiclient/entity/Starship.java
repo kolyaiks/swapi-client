@@ -32,7 +32,7 @@ public class Starship {
     private String url;
     @ManyToMany
     @JoinTable(
-            name = "starships_characters",
+            name = "Starships_Characters",
             joinColumns = @JoinColumn(name = "starship_id"),
             inverseJoinColumns = @JoinColumn(name = "character_id"))
     private Set<Character> pilots;
