@@ -34,7 +34,8 @@ public class StarshipDtoToStarshipEntity implements Function<StarshipDto, Starsh
         if (Objects.isNull(pilots)) return null;
 
         return pilots.stream().sequential()
-                .map(pilot -> characterRepository.findById(pilot).get())
+                .map(pilot -> characterRepository.findById(pilot).orElseThrow(
+                        () -> new RuntimeException(String.format("No value %s found in the database", pilot))))
                 .collect(Collectors.toSet());
     }
 

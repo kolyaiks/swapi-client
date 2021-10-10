@@ -15,12 +15,14 @@ public class CharacterDtoToCharacterEntity implements Function<CharacterDto, Cha
     private final PlanetRepository planetRepository;
 
     @Override
-    public Character apply(CharacterDto character) {
+    public Character apply(CharacterDto characterDto) {
         return Character.builder()
-                .url(character.getUrl())
-                .name(character.getName())
-                .gender(character.getGender())
-                .homeworld(planetRepository.getById(character.getHomeworld()))
+                .url(characterDto.getUrl())
+                .name(characterDto.getName())
+                .gender(characterDto.getGender())
+                .homeworld(planetRepository.findById(characterDto.getHomeworld())
+                        .orElseThrow(() -> new RuntimeException(String.format("No value %s found in the database",
+                                characterDto.getHomeworld()))))
                 .build();
     }
 
