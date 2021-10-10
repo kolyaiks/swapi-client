@@ -54,36 +54,4 @@ public class InitDatasetService {
         return "Dataset is initiated";
     }
 
-//    @SneakyThrows
-//    public List<PlanetDto> getPlanetsFromSwapi() {
-//        log.info("Start of getting planets..");
-//
-//        List<PlanetDto> planetsList = new ArrayList<>();
-//        String url = appProperties.getSwapiURL().getPlanets();
-//
-//        while (Objects.nonNull(url)) {
-//            log.info(String.format("Parsing page %s ..", url));
-//            String response = client.sendRequest(url);
-//            Planets planetsDto = objectMapper.readValue(response, Planets.class);
-//            planetsList.addAll(planetsDto.getResults());
-//            url = planetsDto.getNext();
-//            if (Objects.isNull(url)) log.info("There is no next page to parse");
-//        }
-//        return planetsList;
-//    }
-//
-//
-//    private List<Planet> buildPlanetsEntities(List<PlanetDto> planetDtos) {
-//        log.info("Start of converting Planets DTOs to Planets Entities..");
-//        List<Planet> planets = new ArrayList<>();
-//
-//        for (PlanetDto element : planetDtos) {
-//            Planet planet = planetDtoToPlanetEntity.apply(element);
-//            planets.add(planet);
-//        }
-//        log.info("Planets conversion finished.");
-//        return planets;
-//    }
-
-
 }
