@@ -13,3 +13,9 @@ join STARSHIPS_CHARACTERS sc on s.id=sc.STARSHIP_ID
 join CHARACTER c on sc.CHARACTER_ID = c.id
 order by s.cargo_capacity desc
 limit 10
+
+
+
+{"name":"Jedi Interceptor","cargoCapacity":60,"model":"Eta-2 Actis-class light interceptor","manufacturer":"Kuat Systems Engineering","url":"https://swapi.dev/api/starships/65/","pilots":["https://swapi.dev/api/people/10/","https://swapi.dev/api/people/11/"]}
+
+curl -X POST -H "Content-Type: application/json" -d '{"name":"Super Name", "cargo_capacity":1, "url":"https://swapi.dev/api/starships/13/","pilots":["https://swapi.dev/api/people/13/"]}' "http://localhost:8080/starships/update"

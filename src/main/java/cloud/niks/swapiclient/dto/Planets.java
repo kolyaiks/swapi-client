@@ -16,16 +16,6 @@ public class Planets {
     private int count;
     private String next;
     private String previous;
-    private List<Planets.Planet> results;
-
-    @Getter
-    @Setter
-    @JsonIgnoreProperties(ignoreUnknown = true)
-    public static class Planet {
-
-        private String name;
-        private String url;
-
-    }
+    private List<PlanetDto> results;
 
 }

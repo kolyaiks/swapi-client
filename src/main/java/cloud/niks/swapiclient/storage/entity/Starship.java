@@ -1,4 +1,4 @@
-package cloud.niks.swapiclient.entity;
+package cloud.niks.swapiclient.storage.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
