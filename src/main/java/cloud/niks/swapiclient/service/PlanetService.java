@@ -78,8 +78,14 @@ public class PlanetService {
     }
 
     public String update(PlanetDto dto) {
+        planetRepository.findById(dto.getUrl())
+                .orElseThrow(() -> new RuntimeException(String.format("No entity %s found in the database",
+                        dto.getUrl())));
+
         planetRepository.save(planetDtoToPlanetEntity.apply(dto));
         return "Updated";
+
+
     }
 
 }

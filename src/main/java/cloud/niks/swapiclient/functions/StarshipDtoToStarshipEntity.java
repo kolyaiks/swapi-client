@@ -35,7 +35,7 @@ public class StarshipDtoToStarshipEntity implements Function<StarshipDto, Starsh
 
         return pilots.stream().sequential()
                 .map(pilot -> characterRepository.findById(pilot).orElseThrow(
-                        () -> new RuntimeException(String.format("No value %s found in the database", pilot))))
+                        () -> new RuntimeException(String.format("No entity %s found in the database", pilot))))
                 .collect(Collectors.toSet());
     }
 

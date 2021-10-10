@@ -21,7 +21,7 @@ public class CharacterDtoToCharacterEntity implements Function<CharacterDto, Cha
                 .name(characterDto.getName())
                 .gender(characterDto.getGender())
                 .homeworld(planetRepository.findById(characterDto.getHomeworld())
-                        .orElseThrow(() -> new RuntimeException(String.format("No value %s found in the database",
+                        .orElseThrow(() -> new RuntimeException(String.format("No entity %s found in the database",
                                 characterDto.getHomeworld()))))
                 .build();
     }
