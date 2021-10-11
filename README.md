@@ -78,7 +78,7 @@ limit 10
 
     Update particular planet
 
-10. POST http://swapi-client.niks.cloud/planets/init
+10. GET http://swapi-client.niks.cloud/init
 
     Init dataset
 
