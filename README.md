@@ -1,6 +1,6 @@
-#SWAPI-CLIENT
+# SWAPI-CLIENT
 
-####Description
+#### Description
 For a marketing campaign collect information about Star Wars universe using open API https://swapi.dev/
 Store the following data in the local database:
 
@@ -23,7 +23,7 @@ Back-end (collects data) must:
 2. Data must be stored in a persistent way
 3. It’s better to use cloud native DB solutions like an RDS/AzureSQL/CloudSQL.
 
-####SQL request
+#### SQL request
 ```
 select  s.id starship_id, s.name starship_name,  s.cargo_capacity, s.model, s.manufacturer, sc.character_id, c.name character_name, c.gender character_gender, p.name character_homeworld
 from Starship
@@ -35,7 +35,7 @@ limit 10
 
 ```
 
-####List of available endpoints:
+#### List of available endpoints:
 
 1. GET http://swapi-client.niks.cloud/report
 
@@ -82,7 +82,7 @@ limit 10
 
     Init dataset
 
-####Example of update request:
+#### Example of update request:
 
 ```
 curl -X POST -H "Content-Type: application/json" -d '{"name":"Super Name", "cargo_capacity":"1", "url":"https://swapi.dev/api/starships/13/","pilots":["https://swapi.dev/api/people/13/"]}' "http://swapi-client.niks.cloud/starships/update"
