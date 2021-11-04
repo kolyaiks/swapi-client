@@ -15,7 +15,7 @@ import javax.persistence.ManyToOne;
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity(name = "Character")
+@Entity(name = "character1")
 @Getter
 @Setter
 @AllArgsConstructor
