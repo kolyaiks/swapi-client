@@ -14,7 +14,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import java.util.Set;
 
-@Entity(name = "Starship")
+@Entity(name = "starship")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -32,7 +32,7 @@ public class Starship {
     private String url;
     @ManyToMany
     @JoinTable(
-            name = "Starships_Characters",
+            name = "starships_characters",
             joinColumns = @JoinColumn(name = "starship_id"),
             inverseJoinColumns = @JoinColumn(name = "character_id"))
     private Set<Character> pilots;

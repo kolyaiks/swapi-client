@@ -9,12 +9,8 @@ import lombok.Setter;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import java.util.HashSet;
-import java.util.Set;
 
-@Entity(name = "Planet")
+@Entity(name = "planet")
 @Getter
 @Setter
 @AllArgsConstructor

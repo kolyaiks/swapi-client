@@ -51,7 +51,7 @@ public class CharacterService {
     }
 
     public List<Character> buildEntities(List<CharacterDto> dtos) {
-        log.info("Start of converting Characters DTOs to Starship Entities..");
+        log.info("Start of converting Characters DTOs to Characters Entities..");
         List<Character> characters = new ArrayList<>();
 
         for (CharacterDto element : dtos) {
