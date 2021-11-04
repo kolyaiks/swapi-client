@@ -1,0 +1,15 @@
+swapiURL:
+  planets: https://swapi.dev/api/planets
+  people: https://swapi.dev/api/people
+  starships: https://swapi.dev/api/starships/
+
+spring:
+  datasource:
+    url: jdbc:mysql://${DB_ENDPOINT}:3306/test_db?ssl=false
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+
